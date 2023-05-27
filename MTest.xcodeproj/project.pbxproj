@@ -11,6 +11,7 @@
 		94DA90AB2A21F9170044EB93 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA90AA2A21F9170044EB93 /* HomeViewModel.swift */; };
 		94DA90AD2A21F9F50044EB93 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA90AC2A21F9F50044EB93 /* URLs.swift */; };
 		94DA90AF2A22072C0044EB93 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA90AE2A22072C0044EB93 /* ImageCache.swift */; };
+		94DA90B12A2226D00044EB93 /* AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA90B02A2226CF0044EB93 /* AlertController+Extension.swift */; };
 		94E1E9C62A21BABA0036E4EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1E9C52A21BABA0036E4EF /* AppDelegate.swift */; };
 		94E1E9C82A21BABA0036E4EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1E9C72A21BABA0036E4EF /* SceneDelegate.swift */; };
 		94E1E9CA2A21BABA0036E4EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1E9C92A21BABA0036E4EF /* HomeViewController.swift */; };
@@ -30,6 +31,7 @@
 		94DA90AA2A21F9170044EB93 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		94DA90AC2A21F9F50044EB93 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		94DA90AE2A22072C0044EB93 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		94DA90B02A2226CF0044EB93 /* AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Extension.swift"; sourceTree = "<group>"; };
 		94E1E9C22A21BABA0036E4EF /* MTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E1E9C52A21BABA0036E4EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E1E9C72A21BABA0036E4EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				94E1E9C52A21BABA0036E4EF /* AppDelegate.swift */,
 				94E1E9C72A21BABA0036E4EF /* SceneDelegate.swift */,
 				94DA90AC2A21F9F50044EB93 /* URLs.swift */,
+				94DA90B02A2226CF0044EB93 /* AlertController+Extension.swift */,
 				94E1E9D92A21C0A90036E4EF /* Home */,
 				94E1E9CB2A21BABA0036E4EF /* Main.storyboard */,
 				94E1E9CE2A21BABB0036E4EF /* Assets.xcassets */,
@@ -238,6 +241,7 @@
 				94DA90AF2A22072C0044EB93 /* ImageCache.swift in Sources */,
 				94E1E9E02A21C65D0036E4EF /* CategoryCollectionViewCell.swift in Sources */,
 				94DA90AD2A21F9F50044EB93 /* URLs.swift in Sources */,
+				94DA90B12A2226D00044EB93 /* AlertController+Extension.swift in Sources */,
 				94E1E9CA2A21BABA0036E4EF /* HomeViewController.swift in Sources */,
 				94E1E9C62A21BABA0036E4EF /* AppDelegate.swift in Sources */,
 				94DA90AB2A21F9170044EB93 /* HomeViewModel.swift in Sources */,

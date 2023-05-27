@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tRn-fu-idc">
-                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <rect key="frame" x="0.0" y="121" width="393" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sKk-Qw-iFU">
                                     <size key="itemSize" width="128" height="128"/>
@@ -41,27 +41,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ex3-gY-e7Z"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pE1-gj-UQz">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="pE1-gj-UQz">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rD5-zf-U3I"/>
                                 </connections>
                             </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-e2-4jt">
+                                <rect key="frame" x="178" y="420" width="37" height="37"/>
+                                <color key="color" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pE1-gj-UQz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zm-BA-WYv"/>
                             <constraint firstItem="tRn-fu-idc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BSq-ZT-PdM"/>
-                            <constraint firstItem="tRn-fu-idc" firstAttribute="top" secondItem="pE1-gj-UQz" secondAttribute="bottom" id="GJL-TU-cff"/>
+                            <constraint firstItem="tRn-fu-idc" firstAttribute="top" secondItem="pE1-gj-UQz" secondAttribute="bottom" constant="6" id="GJL-TU-cff"/>
                             <constraint firstItem="pE1-gj-UQz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="KpC-Wg-Lcb"/>
+                            <constraint firstItem="sfy-e2-4jt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="U9w-UC-Fzz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tRn-fu-idc" secondAttribute="bottom" id="eAp-bv-Cdw"/>
+                            <constraint firstItem="sfy-e2-4jt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f39-Ni-Z3G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tRn-fu-idc" secondAttribute="trailing" id="qLj-YI-YmC"/>
                             <constraint firstItem="pE1-gj-UQz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sV2-ya-I8x"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="sfy-e2-4jt" id="ZNA-Wt-q7l"/>
                         <outlet property="collectionView" destination="tRn-fu-idc" id="YT0-v0-8en"/>
                     </connections>
                 </viewController>

@@ -10,21 +10,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="MTest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
+            <rect key="frame" x="0.0" y="0.0" width="119" height="116"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
+                <rect key="frame" x="0.0" y="0.0" width="119" height="116"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TNj-rr-iIL">
-                        <rect key="frame" x="16" y="1" width="153" height="151.66666666666666"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rma-hi-6G5">
+                        <rect key="frame" x="17" y="8" width="85" height="85"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TNj-rr-iIL">
+                                <rect key="frame" x="10" y="11" width="65" height="63.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="OpO-KU-t8x"/>
+                                    <constraint firstAttribute="height" constant="65" id="oxV-O8-NSP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="TNj-rr-iIL" secondAttribute="height" multiplier="1:1" id="qsp-YZ-cNn"/>
+                            <constraint firstAttribute="height" constant="85" id="7T5-r0-pA6"/>
+                            <constraint firstItem="TNj-rr-iIL" firstAttribute="centerX" secondItem="rma-hi-6G5" secondAttribute="centerX" id="Jvx-y6-VAw"/>
+                            <constraint firstItem="TNj-rr-iIL" firstAttribute="centerY" secondItem="rma-hi-6G5" secondAttribute="centerY" id="R7K-Qp-Bes"/>
+                            <constraint firstAttribute="width" constant="85" id="z5L-ML-LKx"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVh-6n-onJ">
-                        <rect key="frame" x="8" y="161" width="169" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVh-6n-onJ">
+                        <rect key="frame" x="8" y="97" width="103" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -32,20 +45,20 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="TNj-rr-iIL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UqD-Uk-wFg"/>
-                <constraint firstItem="SVh-6n-onJ" firstAttribute="top" secondItem="TNj-rr-iIL" secondAttribute="bottom" constant="8" id="VIR-OV-QB9"/>
-                <constraint firstItem="TNj-rr-iIL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="lFT-9D-gLh"/>
-                <constraint firstAttribute="trailing" secondItem="TNj-rr-iIL" secondAttribute="trailing" constant="16" id="oHe-ox-1bM"/>
+                <constraint firstItem="rma-hi-6G5" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="C83-jx-a7e"/>
+                <constraint firstItem="rma-hi-6G5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="HBw-bF-5U9"/>
+                <constraint firstItem="SVh-6n-onJ" firstAttribute="top" secondItem="rma-hi-6G5" secondAttribute="bottom" constant="4" id="bV4-Gi-yMU"/>
                 <constraint firstAttribute="trailing" secondItem="SVh-6n-onJ" secondAttribute="trailing" constant="8" id="s4a-SC-ES3"/>
                 <constraint firstAttribute="bottom" secondItem="SVh-6n-onJ" secondAttribute="bottom" constant="8" id="wJ3-9f-0E0"/>
                 <constraint firstItem="SVh-6n-onJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="xEl-NW-nno"/>
             </constraints>
-            <size key="customSize" width="185" height="191"/>
+            <size key="customSize" width="119" height="116"/>
             <connections>
                 <outlet property="categoryImage" destination="TNj-rr-iIL" id="fcE-6b-63E"/>
                 <outlet property="categoryTitle" destination="SVh-6n-onJ" id="TCq-zP-smL"/>
+                <outlet property="imageContainer" destination="rma-hi-6G5" id="Fs8-dG-i1y"/>
             </connections>
-            <point key="canvasLocation" x="139.69465648854961" y="69.366197183098592"/>
+            <point key="canvasLocation" x="190.07633587786259" y="42.95774647887324"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -16,6 +16,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var offerPrice: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var containerView: UIView!
     
     private var imageURL: URL!
     private var loadImageTask: URLSessionDataTask?
@@ -25,6 +26,18 @@ class ProductCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        addButton.layer.cornerRadius = 5
+        
+        // Applying shadow to the container view
+        containerView.clipsToBounds = true
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowRadius = 5
+        containerView.layer.shouldRasterize = true
+//        containerView.layer.rasterizationScale = UIScreen.main.scale
+        containerView.layer.shadowOpacity = 1
+        containerView.layer.cornerRadius = 5
     }
     
     func configureCell(with cellData: ValueArray) {
@@ -42,7 +55,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         if let offer = cellData.offer {
             if offer > 0 {
                 self.offerLabel.isHidden = false
-                self.offerLabel.text = "\(offer)% OFF"
+                self.offerLabel.text = " \(offer)% OFF "
             } else {
                 self.offerLabel.isHidden = true
             }
@@ -50,13 +63,19 @@ class ProductCollectionViewCell: UICollectionViewCell {
         
         if cellData.actualPrice == cellData.offerPrice {
             self.offerPrice.isHidden = true
+            self.actualPrice.text = cellData.actualPrice
+            self.actualPrice.textColor = .label
         } else {
+            
+            // Attributed string with a strikethrough style
+            let actualPrice: NSMutableAttributedString = NSMutableAttributedString(string: cellData.actualPrice ?? "")
+            actualPrice.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSRange(location: 0, length: actualPrice.length))
+            
             self.offerPrice.isHidden = false
             self.offerPrice.text = cellData.offerPrice
+            self.actualPrice.attributedText = actualPrice
+            self.actualPrice.textColor = .systemGray
         }
-        
-        self.actualPrice.text = cellData.actualPrice
-        
         
         self.imageURL = URL(string: cellData.image ?? "")!
         

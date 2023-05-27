@@ -11,6 +11,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryImage: UIImageView!
     
     @IBOutlet weak var categoryTitle: UILabel!
+    @IBOutlet weak var imageContainer: UIView!
     
     private var imageURL: URL!
     private var loadImageTask: URLSessionDataTask?
@@ -18,6 +19,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        imageContainer.layer.masksToBounds = true
+        imageContainer.layer.cornerRadius = imageContainer.frame.height/2
     }
     
     func configureCell(with imageURL: String) {
